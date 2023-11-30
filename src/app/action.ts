@@ -1,7 +1,7 @@
 "use server";
 
-export function ServerTimeout() {
-  setTimeout(() => {
-    console.log("TimeOut");
-  }, 20000);
+import { timeout } from "./timeout";
+
+export async function ServerTimeout() {
+  await timeout(20000);
 }
