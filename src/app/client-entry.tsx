@@ -12,7 +12,9 @@ export default function ClientEntry() {
   return (
     <>
       <button onClick={req}>Trigger Timeout API</button>
-      <button onClick={ServerTimeout}>Trigger Server Action</button>
+      <button onClick={async () => await ServerTimeout()}>
+        Trigger Server Action
+      </button>
     </>
   );
 }
